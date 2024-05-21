@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class TicketBooking {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the age of the person: ");
+        int age = scanner.nextInt();
+        
+        String result = (age < 15 || age > 60) ? "Not Allowed" : "Allowed";
+        System.out.println(result);
+    }
+}
