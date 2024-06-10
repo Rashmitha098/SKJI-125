@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class SumOfDigits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        long n = scanner.nextLong();
+        
+        int oddSum = 0;
+        int evenSum = 0;
+        
+        String numberString = String.valueOf(n);
+        for (int i = 0; i < numberString.length(); i++) {
+            int digit = Character.getNumericValue(numberString.charAt(i));
+            if (digit % 2 == 0) {
+                evenSum += digit;
+            } else {
+                oddSum += digit;
+            }
+        }
+        
+        System.out.println(oddSum + " " + evenSum);
+    }
+}
